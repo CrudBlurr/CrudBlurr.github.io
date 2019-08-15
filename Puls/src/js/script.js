@@ -27,10 +27,48 @@ $(document).ready(function(){
                 e.preventDefault();
                 $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
                 $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-            })
+            });
         });
     };
 
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
+
+    // Modal
+
+    $('[data-modal=consultation]').on('click', function() {
+        $('.overlay, #consultation').fadeIn('slow');
+    });
+    $('.modal__close').on('click', function() {
+        $('.overlay, #consultation , #thanks , #order').fadeOut('slow');
+    });
+
+    $('.buttons_mini').each(function(i) {
+        $(this).on('click', function(){
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn('slow');
+        });
+    });
+
+    $('#consultation-form').validate();
+    $('#consultation form').validate({
+        rules: {
+            name : "required",
+            phone: "required",
+            email: {
+                required: true,
+                email: true,
+            }
+        },
+        messages: {
+            name: "Пожалуйста, введите свое имя",
+            phone: "Пожалуйста, введите свой номер телефона. Ах ты сука, арслан верни долг-_-",
+            email: {
+              required: "Пожалуйста, введите свою почту",
+              email: "Неправильно введен дарес почты"
+            }
+        }
+    });
+
+    $('#order form').validate();
 });
