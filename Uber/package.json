@@ -22,9 +22,12 @@
     "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-cli": "^2.2.0",
+    "gulp-imagemin": "^6.1.0",
     "gulp-sass": "^4.0.2"
   },
   "dependencies": {
+    "bootstrap": "^4.3.1",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-rename": "^1.4.0"
   }
 }
