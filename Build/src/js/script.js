@@ -18,7 +18,7 @@ $(document).ready(function(){
         speed: 1200,
         fade: true,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3000,
         adaptiveHeight: true,
         prevArrow: '<button type="button" class="slick-prev"><img src="icons/right.svg"></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="icons/right.svg"></button>',
