@@ -31,7 +31,7 @@
         </div>
     </header>
     <!-- БЛОК ПРОМО -->
-    <div class="promo">
+    <div class="promo" id="up">
         <div class="container">
             <div class="promo__wrapper">
                 <div class="promo__title">ПОЛУЧИТЕ ГАРАНТИРОВАННУЮ КОМПЕНСАЦИЮ<br> 
@@ -39,12 +39,12 @@
                     В ВАШЕЙ КВАРТИРЕ<br>
                     ОТ 100000 РУБ. 100% РЕЗУЛЬТАТ.</div>
                 <div class="promo__subtitle">ПРЕДВАРИТЕЛЬНЫЙ ОСМОТР БЕСПЛАТНО</div>
-                <button class="buttons">Узнать подробнее</button>
+                <a href="#viol"><button class="buttons">Узнать подробнее</button></a>
             </div>
         </div>
     </div>
     <!-- БЛОК С НАРУШЕНИЯМИ -->
-    <div class="violations">
+    <div class="violations" id="viol">
         <div class="container">
             <div class="violations__wrapper">
                 <div class="violations__title">СТРОИТЕЛЬНЫЕ ДЕФЕКТЫ ЕСТЬ аБСАЛЮТНО В КАЖДОЙ КВАРТИРЕ, 
@@ -174,13 +174,17 @@
         </div>  
         <div class="container">
             <div class="why__btn">
-                <button class="buttons buttons_why">ОСТАВИТЬ ЗАЯВКУ</button>
-                <a href="" class="why__down"><img src="img/down.png" alt=""></a>
+                <a href="#form"><button class="buttons buttons_why">ОСТАВИТЬ ЗАЯВКУ</button></a>
+                <div class="why__down"> 
+                    <div class="chevron"></div> 
+                    <div class="chevron"></div> 
+                    <div class="chevron"></div> 
+                </div>
             </div>
         </div>
     </section>
     <!-- ЗАЯВКА -->
-    <section class="request">
+    <section class="request" id="form">
         <div class="request__header">
             <div class="request__line"></div>
             <h1 class="request__title">ОСТАВИТЬ ЗАЯВКУ</h1>
@@ -215,11 +219,11 @@
                 </div>
                 <div class="verification__title">Мы используем только сертифицированные программы и оборудование</div>
                 <div class="multiple-slider">
-                    <div><img src="img/verification_1.jpg" alt="slider"></div>
-                    <div><img src="img/verification_2.jpg" alt="slider"></div>
-                    <div><img src="img/verification_1.jpg" alt="slider"></div>
-                    <div><img src="img/verification_1.jpg" alt="slider"></div>
-                    <div><img src="img/verification_1.jpg" alt="slider"></div>
+                    <div><img class="img_zoom" src="img/verification_1.jpg" alt="slider"></div>
+                    <div><img class="img_zoom" src="img/verification_2.jpg" alt="slider"></div>
+                    <div><img class="img_zoom" src="img/verification_1.jpg" alt="slider"></div>
+                    <div><img class="img_zoom" src="img/verification_1.jpg" alt="slider"></div>
+                    <div><img class="img_zoom" src="img/verification_1.jpg" alt="slider"></div>
                 </div>
             </div>
         </div>
@@ -299,11 +303,53 @@
             </div>
         </div>
     </footer>
+
+    <div class="overlay">
+        <div class="modal" id="consultation">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Просто заполните форму заявки</div>
+            <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
+            <form id="consultation-form" class="feed-form" action="#">
+                <div class="feed-form__title">Имя</div>
+                <input name="name" type="text">
+                <div class="feed-form__title">Телефон</div>
+                <input name="phone">
+
+                <button class="buttons buttons_submit">ОСТАВИТЬ ЗАЯВКУ</button>
+            </form>
+        </div>
+
+        <!-- <div class="modal" id="order">
+                <div class="modal__close">&times;</div>
+                <div class="modal__subtitle">Ваш заказ:</div>
+                <div class="modal__descr">Пульсометр Polar FT1</div>
+                <form class="feed-form feed-form_mt25" action="#">
+                    <input name="name" placeholder="Ваше имя" type="text">
+                    <input name="phone" placeholder="Ваш телефон">
+                    <input name="email" placeholder="Ваш E-mail" type="text">
+    
+                    <button class="buttons buttons_submit buttons_modal">Купить</button>
+                </form>
+        </div> --> 
+        <div class="modal modal_mini" id="thanks">
+                <div class="modal__close">&times;</div>
+                <div class="modal__subtitle">Спасибо за вашу заявку!</div>
+                <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
+        </div>
+    </div>
+
+    <a href="#up" class="pageup">
+        <img src="icons/up-chevron.svg" alt="up">
+    </a>
+
+    <div class="form-modal form-modal_animated"><img src="icons/phone.svg" alt="modal"></div>
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <!-- <script src="js/wow.min.js"></script> -->
+    <!-- <script src="js/jquery.zoom.min.js"></script> -->
     <script src="js/script.js"></script>
 </body>
 </html>
