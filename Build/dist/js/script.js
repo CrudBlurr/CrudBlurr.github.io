@@ -82,11 +82,8 @@ $(document).ready(function(){
     
     validateForms('#consultation-form');
     validateForms('#consultation-price');
-    // validateForms('#consultation form');
-    // validateForms('#order form');
-    $('input[name=phone]').mask("+7(999) 999-9999");
 
-    // $('input[name=phone]').mask("+7(999) 999-9999");
+    $('input[name=phone]').mask("+7(999) 999-9999");
 
     $('form').submit(function(e) {
         e.preventDefault();
@@ -111,25 +108,37 @@ $(document).ready(function(){
             $('.pageup').fadeOut();
         }
     });
+    $("a[href='#up']" ).click(function(){
+        const _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 1500);
+        return false;
+    });
 
-    $("a[href='#up'] , a[href='#viol'] , a[href='#form']").click(function(){
-        const _href = $(this).attr("href");
-        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
-        return false;
-    });
-    $("a[href='#viol']").click(function(){
-        const _href = $(this).attr("href");
-        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
-        return false;
-    });
-    $("a[href='#form']").click(function(){
-        const _href = $(this).attr("href");
-        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
-        return false;
-    });
-    
+    $("#menu").on("click","a", function (event) {
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
 
-    // new WOW().init();
+        //забираем идентификатор бока с атрибута href
+        var id  = $(this).attr('href'),
+
+        //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;
+        
+        //анимируем переход на расстояние - top за 1500 мс
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+
+
+    // $("a[href='help']").click(function(){
+    //     const _href = $(this).attr("href");
+    //     $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 1500);
+    //     return false;
+    // });
+
+
+    var sticky = new Sticky('.navbar');
+
+    new WOW().init();
     // //zoom
     // $('.img_zoom')
     //     .wrap('<span style="display:inline-block"></span>')

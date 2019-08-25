@@ -14,24 +14,11 @@
             <div class="header__wrapper">   
                 <div class="header__logo">
                     <div class="header__icons"><a href="#up"><img src="icons/stroyexp.svg" alt="logo"></a></div>
-                    <div class="header__line"></div>
-                    <div class="header__phone"><a href="tel:8888888888 " class="header__tell">тел. 8888888888 </a></div>
-                    <div class="header__line header__line_yellow"></div>
+                    <div class="line"></div>
+                    <div class="phone"><a href="tel:8888888888 " class="tell">тел. 8888888888 </a></div>
+                    <div class="header__post-office"><a href="mailto:stroi_expert24@mail.ru" class="header__mail">stroi_expert24@mail.ru</a></div>
+                    <div class="line line_yellow"></div>
                 </div>
-                <nav class="header__navbar">
-                    <ul class="header__menu">
-                        <li class="header__item"><a href="#" class="header__link">Блок</a></li>
-                        <li class="header__item"><a href="#" class="header__link">Блок</a></li>
-                        <li class="header__item"><a href="#" class="header__link">Блок</a></li>
-                        <li class="header__item"><a href="#" class="header__link">Блок</a></li>
-                        <li class="header__item"><a href="#" class="header__link">Блок</a></li>
-                    </ul>
-                <div class="humburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                </nav>
             </div>
         </div>
     </header>
@@ -39,14 +26,38 @@
     <div class="promo" id="up">
         <div class="container">
             <div class="promo__wrapper">
+                <div class="promo__header">Не устраивает ремонт в Вашей квартире?</div>
                 <div class="promo__title">ПОЛУЧИТЕ ГАРАНТИРОВАННУЮ КОМПЕНСАЦИЮ<br> 
                     ЗА НЕКАЧЕСТВЕННО ВЫПОЛНЕННЫЙ РЕМОНТ<br>
                     В ВАШЕЙ КВАРТИРЕ<br>
-                    ОТ 100000 РУБ. 100% РЕЗУЛЬТАТ.</div>
-                <div class="promo__subtitle">ПРЕДВАРИТЕЛЬНЫЙ ОСМОТР БЕСПЛАТНО</div>
-                <a href="#viol"><button class="buttons">Узнать подробнее</button></a>
+                    <span>ОТ 100000 РУБ. 100% РЕЗУЛЬТАТ.</span></div>
+                <div class="promo__subtitle">ОСМОТР КВАРТИРЫ БЕСПЛАТНО</div>
+                <a href="#viol"><button class="buttons buttons_animated">ОСТАВИТЬ ЗАЯВКУ</button></a>
             </div>
         </div>
+    </div>
+    <!-- Навигация -->
+    <div class="navbar">
+        <div class="container">
+            <div class="navbar__wrapper">
+                <div class="navbar__phone">
+                    <div class="phone">
+                        <a href="tel:8888888888 " class="tell">тел. 8888888888</a>
+                    </div>
+                    <div class="line line_yellow"></div>
+                </div>
+                <nav class="navbar__items" id="menu">
+                    <ul class="navbar__menu">
+                        <li class="navbar__block"><a href="#viol" class="navbar__item">Нарушения</a></li>
+                        <li class="navbar__block"><a href="#help" class="navbar__item">Мы поможем вам</a></li>
+                        <li class="navbar__block"><a href="#why" class="navbar__item">Почему мы</a></li>
+                        <li class="navbar__block"><a href="#form" class="navbar__item">Оставить заявку</a></li>
+                        <li class="navbar__block"><a href="#verification" class="navbar__item">Сертификаты</a></li>
+                        <li class="navbar__block"><a href="#contacts" class="navbar__item">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>  
     </div>
     <!-- БЛОК С НАРУШЕНИЯМИ -->
     <div class="violations" id="viol">
@@ -66,7 +77,7 @@
         </div>
     </div>
     <!-- МЫ ПОМОЖЕМ ВАМ -->
-    <section class="help">
+    <section class="help" id="help">
         <div class="container">
             <h1 class="help__title">Мы поможем ВАМ:</h1>
             <div class="help__wrapper">
@@ -114,7 +125,7 @@
         </div>
     </section>
     <!-- ПОЧЕМУ МЫ -->
-    <section class="why">
+    <section class="why" id="why">
             <h1 class="why__title">ПОЧЕМУ МЫ?</h1>
             <div class="why__wrapper">
                 <div class="why__line why__line_mini"></div>
@@ -216,7 +227,7 @@
             <div class="request__quote">Мы уверены в результате и поэтому не берем предоплату.</div>
         </div>
     </section>
-    <div class="verification">
+    <div class="verification" id="verification">
         <div class="container">
             <div class="verification__wrapper">
                 <div class="verification__icon">
@@ -233,7 +244,7 @@
             </div>
         </div>
     </div>
-    <div class="discount">
+    <div class="discount" id="discount">
         <div class="container">
             <div class="discount__title ">Если вашей квартире не более 5 лет с момента</div>
             <div class="discount__title">передачи - получите компенсацию от 100 до 500 тысяч рублей.</div>
@@ -296,7 +307,7 @@
         </div>
     </div>
     
-    <footer class="footer">
+    <footer class="footer" id="contacts">
         <div class="container">
             <div class="footer__wrapper">
                 <div class="footer__phone"><a href="tel:+73912526752" class="footer__tell">8(391)2-52-67-52 - Александр</a></div>
@@ -340,7 +351,8 @@
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <!-- <script src="js/wow.min.js"></script> -->
+    <script src="js/sticky.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <!-- <script src="js/jquery.zoom.min.js"></script> -->
     <script src="js/script.js"></script>
 </body>
