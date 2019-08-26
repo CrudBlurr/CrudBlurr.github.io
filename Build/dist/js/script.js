@@ -34,11 +34,20 @@ $(document).ready(function(){
             }
         ]
     });
-    $('.multiple-slider').slick({
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+      });
+      $('.slider-nav').slick({
         slidesToShow: 2,
         slidesToScroll: 1,
         speed: 1200,
         infinite: true,
+        asNavFor: '.slider-for',
+        focusOnSelect: true,
         autoplaySpeed: 3000,
         prevArrow: '<button type="button" class="slick-prev"><img src="icons/left.svg"></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="icons/right.svg"></button>',
@@ -51,8 +60,20 @@ $(document).ready(function(){
                 }
             }
         ]
-    });
-    
+      });
+      
+      // ZOOM
+      $('.ex1').zoom();
+      
+      // STYLE GRAB
+      $('.ex2').zoom({ on:'grab' });
+      
+      // STYLE CLICK
+      $('.ex3').zoom({ on:'click' });	
+      
+      // STYLE TOGGLE
+      $('.ex4').zoom({ on:'toggle' });
+
     // Modal
     $('.modal__close').on('click', function() {
         $('.overlay, #consultation , #thanks , #order').fadeOut('slow');
