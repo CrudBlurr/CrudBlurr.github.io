@@ -13,13 +13,13 @@ $mail->CharSet = 'utf-8';
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = '';                 // Наш логин
-$mail->Password = '';                           // Наш пароль от ящика
+$mail->Username = 'crudblurr@gmail.com';                 // Наш логин
+$mail->Password = '5645+215689789012';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('*', '');   // От кого письмо. В перве кавычки (там где звездочка)скобку Можете написать почут которую написали выше. а во вторюу имя(stroiexpert)
-$mail->addAddress(');     // Куда
+$mail->setFrom('', 'Puls');   // От кого письмо 
+$mail->addAddress('firefoxdest@gmail.com');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');

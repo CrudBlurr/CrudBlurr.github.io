@@ -62,18 +62,6 @@ $(document).ready(function(){
         ]
       });
       
-      // ZOOM
-      $('.ex1').zoom();
-      
-      // STYLE GRAB
-      $('.ex2').zoom({ on:'grab' });
-      
-      // STYLE CLICK
-      $('.ex3').zoom({ on:'click' });	
-      
-      // STYLE TOGGLE
-      $('.ex4').zoom({ on:'toggle' });
-
     // Modal
     $('.modal__close').on('click', function() {
         $('.overlay, #consultation , #thanks , #order').fadeOut('slow');
@@ -161,10 +149,6 @@ $(document).ready(function(){
         $('body,html').animate({scrollTop: top}, 1500);
     });
 
-
     var sticky = new Sticky('.navbar');
-
-    new WOW().init();
-
  
 });
