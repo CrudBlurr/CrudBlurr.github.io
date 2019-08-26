@@ -1,20 +1,20 @@
 window.addEventListener('DOMContentLoaded', () => {
-    const menu = document.querySelector('.menu'),
-    menuItem = document.querySelectorAll('.menu_item'),
+    const menu = document.querySelector('.navbar__menu'),
+    menuItem = document.querySelectorAll('.navbar__block'),
     hamburger = document.querySelector('.humburger');
 
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('humburger_active');
-        menu.classList.toggle('menu_active');
+        menu.classList.toggle('navbar__menu_active');
     });
 
     menuItem.forEach(item => {
         item.addEventListener('click', () => {
             hamburger.classList.toggle('humburger_active');
-            menu.classList.toggle('menu_active');
+            menu.classList.toggle('navbar__menu_active');
         })
     })
-});
+})
 
 $(document).ready(function(){
     $('.slider').slick({
@@ -108,7 +108,19 @@ $(document).ready(function(){
             $('.pageup').fadeOut();
         }
     });
+    $(window).scroll(function(){
+        if($(this).scrollTop() >590) {
+            $('.humburger').fadeIn();
+        } else {
+            $('.humburger').fadeOut();
+        }
+    });
     $("a[href='#up']" ).click(function(){
+        const _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 1500);
+        return false;
+    });
+    $("a[href='#form']" ).click(function(){
         const _href = $(this).attr("href");
         $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 1500);
         return false;
@@ -129,20 +141,9 @@ $(document).ready(function(){
     });
 
 
-    // $("a[href='help']").click(function(){
-    //     const _href = $(this).attr("href");
-    //     $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 1500);
-    //     return false;
-    // });
-
-
     var sticky = new Sticky('.navbar');
 
     new WOW().init();
-    // //zoom
-    // $('.img_zoom')
-    //     .wrap('<span style="display:inline-block"></span>')
-    //     .css('display', 'block')
-    //     .parent()
-    //     .zoom();
+
+ 
 });
