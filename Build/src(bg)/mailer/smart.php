@@ -18,8 +18,8 @@ $mail->Password = '';                           // Наш пароль от ящ
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('*', 'Puls');   // От кого письмо .Там где звездочка можете вписать почту которую вписали выше, вторая скобка там где пульс от кого письмо
-$mail->addAddress('');     // Почта получателя
+$mail->setFrom('*', '');   // От кого письмо. В перве кавычки (там где звездочка)скобку Можете написать почут которую написали выше. а во вторюу имя(stroiexpert)
+$mail->addAddress(');     // Куда
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
