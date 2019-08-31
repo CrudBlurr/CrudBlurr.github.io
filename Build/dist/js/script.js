@@ -77,7 +77,10 @@ $(document).ready(function(){
                     required: true,
                     minlength: 2
                 },
-                phone: "required"
+                phone: {
+                    required: true,
+                    maxlength:20
+                },
             },
             messages: {
                 name: {
